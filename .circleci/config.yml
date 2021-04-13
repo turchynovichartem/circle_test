@@ -20,7 +20,7 @@ jobs: # basic units of work in a run
       - run:
           name: "echo an env var that is part of our context"
           command: |
-            echo $MY_ENV_VAR
+            echo $CIRCLE_BRANCH
 
 
 workflows: # a single workflow with a single job called build
@@ -28,5 +28,5 @@ workflows: # a single workflow with a single job called build
     jobs:
       - build:
           context: staging
-      - build:
-          context: beta
+#      - build:
+#         context: beta
