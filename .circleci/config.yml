@@ -17,6 +17,10 @@ jobs: # basic units of work in a run
       - run:
           name: "pass"
           command: echo $pass
+      - run:
+          name: "echo an env var that is part of our context"
+          command: |
+            echo $MY_ENV_VAR
 
 
 workflows: # a single workflow with a single job called build
